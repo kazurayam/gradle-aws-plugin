@@ -13,6 +13,7 @@ buildscript {
 		classpath "net.ltgt.gradle:gradle-errorprone-plugin:0.0.14"
 		classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2"
 		classpath "com.gradle.publish:plugin-publish-plugin:0.9.10"
+		classpath "gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.0.4"
 	}
 }
 
@@ -31,7 +32,7 @@ defaultTasks "clean", "build"
 
 // ======== code quality ========
 apply plugin: "checkstyle"
-apply plugin: "findbugs"
+apply plugin: "com.github.spotbugs"
 apply plugin: "pmd"
 apply plugin: "cpd"
 apply plugin: "jacoco"
